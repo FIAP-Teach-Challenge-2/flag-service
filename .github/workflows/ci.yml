@@ -13,4 +13,7 @@ jobs:
       service-name: flag-service
       ecr-repository: togglemaster/flag-service
       needs-postgres: true
-    secrets: inherit
+    secrets:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
